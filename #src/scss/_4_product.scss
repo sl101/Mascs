@@ -1,0 +1,92 @@
+.product {
+	background-color: $white-400;
+	border-radius: 10px;
+
+	// .product__image
+	&__image {
+	}
+
+	// .product__img
+	&__img {
+		border-radius: 10px;
+	}
+
+	// product__content
+	&__content {
+		padding: 42px 40px 40px;
+	}
+
+	// .product__title
+	&__title {
+		font-family: "Roboto";
+		font-weight: 700;
+		font-size: 24px;
+		margin: 0 0 12px 0;
+	}
+
+	// .product__name
+	&__name {
+		display: block;
+		margin: 0 0 24px 0;
+	}
+
+	// .product__inner
+	&__inner {
+		margin-bottom: 2px;
+	}
+
+	// .product__list
+	&__list {
+		margin: 0 0 14px 0;
+	}
+
+	// .product__amount
+	&__amount {
+		line-height: 1.1;
+		&:not(:last-child) {
+			margin: 0 0 16px 0;
+		}
+	}
+
+	// .product__description
+	&__description {
+		max-width: 250px;
+		font-size: 12px;
+		line-height: 1.2;
+	}
+
+	// .product__price
+	&__price {
+		display: block;
+		padding: 20px 0 0 0;
+		margin: 0 0 21px 0;
+	}
+
+	// .product__old-price
+	&__old-price {
+		display: block;
+		text-decoration: line-through;
+		font-style: italic;
+		font-size: 16px;
+		margin: 0 0 8px 0;
+	}
+
+	// .product__new-price
+	&__new-price {
+		display: inline-block;
+		font-weight: 500;
+		font-size: 22px;
+	}
+
+	// .product__value
+	&__value {
+		display: inline-block;
+		font-weight: 400;
+		font-size: 12px;
+		color: $black-600;
+	}
+
+	// .product__button
+	&__button {
+	}
+}

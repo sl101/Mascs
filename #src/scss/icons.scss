@@ -1,18 +1,69 @@
-%ic {
+@font-face {
 	font-family: "icons";
+	src: url("../fonts/icons.ttf?8sy6cu") format("truetype"), url("../fonts/icons.woff?8sy6cu") format("woff"),
+		url("../fonts/icons.svg?8sy6cu#icons") format("svg");
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+[class^="_icon-"]::before,
+[class*=" _icon-"]::before {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: "icons" !important;
+	speak: never;
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
+
+	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
-[class^="_icon-"],
-[class*=" _icon-"] {
-	&:before {
-		@extend %ic;
-		display: block;
-	}
+._icon-camera:before {
+	content: "\1f4f8";
+}
+._icon-check:before {
+	content: "\1f5f8";
+	color: $teal-400;
+}
+._icon-medical-mask:before {
+	content: "\1f637";
+}
+._icon-pet:before {
+	content: "\1f638";
+}
+._icon-phone:before {
+	content: "\1f4de";
+	color: $teal-400;
+}
+._icon-size:before {
+	content: "\1f4cf";
+}
+._icon-telegram:before {
+	content: "\1f6ea";
+}
+._icon-viber:before {
+	content: "\2706";
+}
+._icon-washer:before {
+	content: "\1f6b0";
+}
+._icon-whatsapp:before {
+	content: "\1f4ac";
+}
+._icon-www:before {
+	content: "\1f310";
+}
+._icon-close:before {
+	content: "\1f5d9";
+}
+._icon-p-left:before {
+	content: "\2329";
+}
+._icon-p-right:before {
+	content: "\232a";
 }

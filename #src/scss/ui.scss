@@ -264,3 +264,32 @@ body.ie {
 	}
 }
 //</ГОТОВЫЕ КЛАССЫ>====================================================================================================
+// ===============================================================================
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+._title {
+	font-weight: 700;
+	font-size: 36px;
+}
+
+._btn {
+	// display: inline-block;
+	max-width: 215px;
+	border-radius: 30px;
+	font-size: 20px;
+	overflow: hidden;
+	background-color: $teal-400;
+	color: $white;
+	padding: 14px 36px 13px 36px;
+	// padding: 13px 35px 12px 35px;
+}

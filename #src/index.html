@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('_head.html',{
+@@include('components/head.html',{
 "title":"Маски"
 })
 
 <body class="body">
+
 	<div class="wrapper">
-		@@include('_header.html',{})
+		@@include('components/hero.html',{})
+
 		<main class="page">
+			@@include('components/advantages.html',{})
+			@@include('components/hits.html',{})
+			@@include('components/popular.html',{})
+			@@include('components/request.html',{})
+			@@include('components/dellivery.html',{})
 
 		</main>
-		@@include('_footer.html',{})
+
+		@@include('components/footer.html',{})
 	</div>
+
 	@@include('_popup.html',{})
 	@@include('_js.html',{})
 </body>

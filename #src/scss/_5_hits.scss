@@ -1,0 +1,23 @@
+.hits {
+	// .hits__content
+
+	&__content {
+	}
+
+	// .hits__title
+
+	&__title {
+	}
+
+	& .product {
+		max-width: 375px;
+	}
+
+	& .product__image {
+		display: none;
+	}
+
+	& .product__value {
+		display: none;
+	}
+}

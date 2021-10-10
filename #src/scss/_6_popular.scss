@@ -1,0 +1,19 @@
+.popular {
+	// .popular__content
+
+	&__content {
+	}
+
+	// .popular__title
+
+	&__title {
+	}
+
+	& .product {
+		max-width: 350px;
+	}
+
+	& .product__inner {
+		display: none;
+	}
+}

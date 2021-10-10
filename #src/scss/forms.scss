@@ -19,9 +19,13 @@
 //<BUTTONS (a.btn+tab)>====================================================================================================
 .button {
 	display: inline-flex;
+	// border: 1px solid $teal-400;
 	padding: 0px 0px;
+	transition: all $hoverTime ease;
 	@media (any-hover: hover) {
 		&:hover {
+			background-color: $teal-450;
+			box-shadow: 0 0 4px 2px #000;
 		}
 	}
 	&._fw {
