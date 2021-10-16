@@ -1,18 +1,454 @@
-//===========================================
-// ====================================================================================================
+.header {
+	width: 100%;
+	padding: 20px 0 7px 0;
+	position: fixed;
+	z-index: 7;
+	transition: all $hoverTime ease;
+
+	@include xl {
+	}
+
+	@include lg {
+	}
+
+	@include md {
+	}
+
+	@include sm {
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		z-index: 0;
+		background-color: $white-400;
+		top: 50px;
+		left: 50px;
+		right: 50px;
+		border-radius: 30px;
+		box-shadow: 0 0 40px 40px $white-400;
+		transition: all $hoverTime ease;
+
+		@include xl {
+		}
+
+		@include lg {
+		}
+
+		@include md {
+			display: none;
+			z-index: 9;
+		}
+
+		@include sm {
+		}
+	}
+
+	// .header__content
+
+	&__content {
+		position: relative;
+		// z-index: 1;
+		// align-self: start;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@include xl {
+		}
+
+		@include lg {
+		}
+
+		@include md {
+			// position: static;
+		}
+
+		@include sm {
+		}
+	}
+
+	// .header__logo
+
+	&__logo {
+		position: relative;
+		z-index: 9;
+		@include xl {
+		}
+
+		@include lg {
+		}
+
+		@include md {
+			position: absolute;
+			top: 0px;
+		}
+
+		@include sm {
+		}
+	}
+
+	// .header__menu
+
+	&__menu {
+		// border: 1px solid red;
+		// max-width: 100%;
+		position: relative;
+		width: 100%;
+		// z-index: 1;
+		// flex-wrap: 100%;
+		// flex-grow: 1;
+		// flex-shrink: 1;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@include xl {
+		}
+
+		@include lg {
+		}
+
+		@include md {
+			justify-content: flex-end;
+			// position: static;
+			// position: absolute;
+			top: 20px;
+			right: 10px;
+			// left: 0;
+			// background-color: $black-200;
+		}
+
+		@include sm {
+		}
+	}
+
+	&._scroll {
+		padding: 5px 0;
+		&::before {
+			top: 15px;
+			left: 10px;
+			right: 10px;
+			min-height: 35px;
+			background-color: $white;
+			box-shadow: 0 0 20px 20px $white;
+			opacity: 1;
+		}
+	}
+}
+
+.menu {
+	// border: 1px solid red;
+	// .menu__image
+
+	&__image {
+		max-width: 64px;
+	}
+
+	// .menu__icon
+
+	&__icon {
+	}
+
+	// .menu__body
+
+	&__body {
+		position: relative;
+		z-index: 1;
+		// max-width: 100%;
+		width: 100%;
+		// flex: 1 1 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		transition: all $hoverTime ease;
+
+		@include xl {
+			justify-content: start;
+		}
+
+		@include lg {
+		}
+
+		@include md {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 8;
+			overflow: auto;
+			transform: translate(-100%, 0);
+			flex-direction: column;
+			align-items: start;
+			background-color: $teal-970;
+			padding: 140px 20px 30px;
+		}
+
+		@include sm {
+		}
+
+		&._active {
+			transform: translate(0, 0);
+		}
+	}
+
+	// .menu__list
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 10px 0 30px;
+
+		@include xl {
+			padding: 0 10px 0 15px;
+		}
+
+		@include lg {
+		}
+
+		@include md {
+			flex-direction: column;
+			align-items: start;
+			padding: 0;
+			margin: 0 0 50px;
+		}
+
+		@include sm {
+		}
+	}
+
+	// .menu__item
+
+	&__item {
+		&:not(:last-child) {
+			margin: 0 30px 0 0;
+		}
+
+		@include md {
+			font-weight: 700;
+			font-size: 32px;
+			&:not(:last-child) {
+				margin: 0 0 30px 0;
+			}
+		}
+	}
+
+	// .menu__link
+
+	&__link {
+		color: $black-200;
+		text-decoration: transparent;
+		transition: all $hoverTime ease;
+
+		@include md-min {
+			&:hover {
+				color: $teal-400;
+				text-decoration: underline;
+			}
+
+			&:active {
+			}
+
+			&:focus {
+			}
+		}
+	}
+
+	// .menu__callback
+
+	&__callback {
+		display: flex;
+
+		// font-weight: 500;
+		text-decoration: transparent;
+		color: $black-200;
+		background-color: transparent;
+		// text-decoration: underline;
+		// color: $teal-400;
+		padding: 0 0 0 20px;
+		transition: all $hoverTime ease;
+
+		@include md-min {
+			&:hover {
+				color: $teal-400;
+				text-decoration: underline;
+
+				& ._icon-phone {
+					&::before {
+						color: $teal-400;
+					}
+				}
+			}
+
+			&:active {
+			}
+
+			&:focus {
+			}
+		}
+
+		@include xl {
+			padding: 0 0 0 35px;
+			& p {
+				display: none;
+			}
+		}
+
+		@include lg {
+		}
+
+		@include md {
+			flex-direction: column;
+			text-align: left;
+			align-items: start;
+			font-size: 28px;
+			font-weight: 500;
+			padding: 0;
+			margin: 0 0 50px;
+
+			& p {
+				display: block;
+			}
+		}
+
+		@include sm {
+		}
+	}
+
+	// .menu__phones
+
+	&__phones {
+		// align-items: flex-end;
+		// transform: translate(-5px, 0);
+
+		@include xl {
+			flex-grow: 1;
+			// flex-shrink: 1;
+			// align-self: end;
+			text-align: end;
+		}
+
+		@include lg {
+		}
+
+		@include md {
+			font-size: 28px;
+			// transform: translate(0, 0);
+		}
+
+		@include sm {
+		}
+	}
+
+	// .menu__arrow
+	&__arrow {
+		display: none;
+		@include xl {
+		}
+
+		@include lg {
+			display: block;
+			position: relative;
+			padding: 0 30px 0 0;
+			cursor: pointer;
+			transition: all $hoverTime ease;
+
+			&:hover {
+				color: $teal-400;
+				&::after {
+					border-top-color: $teal-400;
+				}
+			}
+
+			&:active {
+			}
+
+			&:focus {
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				right: 0;
+				width: 0;
+				height: 0;
+				transform: translate(0, -50%);
+				border-left: 10px solid transparent;
+				border-right: 10px solid transparent;
+				border-top: 15px solid $black-200;
+				transition: all $hoverTime ease;
+			}
+		}
+
+		@include md {
+			display: none;
+		}
+
+		@include sm {
+		}
+	}
+
+	// .menu__phone
+
+	&__phone {
+		&:not(:last-child) {
+			margin: 0 0 5px;
+		}
+
+		@include xl {
+		}
+
+		@include lg {
+			display: none;
+		}
+
+		@include md {
+			display: block;
+			&:not(:last-child) {
+				margin: 0 0 25px;
+			}
+		}
+
+		@include sm {
+		}
+	}
+
+	// .menu__tel
+
+	&__tel {
+		font-weight: 700;
+		color: $black-200;
+		transition: all $hoverTime ease;
+
+		@include md-min {
+			&:hover {
+				color: $teal-400;
+			}
+
+			&:active {
+			}
+
+			&:focus {
+			}
+		}
+	}
+}
 
 //Burger
 .icon-menu {
 	display: none;
 	@media (max-width: $md3+px) {
 		display: block;
-		position: absolute;
-		top: 18px;
-		right: 10px;
+		position: relative;
+		// top: 20px;
+		// right: 10px;
+		// right: 0;
 		width: 30px;
 		height: 18px;
 		cursor: pointer;
-		z-index: 5;
+		z-index: 9;
 		span {
 			transition: all 0.3s ease 0s;
 			top: calc(50% - 1px);

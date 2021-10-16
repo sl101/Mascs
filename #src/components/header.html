@@ -1,43 +1,54 @@
-<header class="header">
+<header class="header _lp">
+	<!-- <div class="header__wrapper"> -->
 	<div class="header__content _container">
+		<a class="header__logo logo" data-goto=".home" href="#">
+			<img class="menu__image" src="img/logo.png" alt="Логотип">
+		</a>
 		<div class="header__menu menu">
-			<a class="menu__logo logo" data-goto=".hero" href="#">
-				<img class="menu__image" src="img/logo.png" alt="Логотип">
-			</a>
 			<button class="menu__icon icon-menu" type="button">
-				<span class="sr-only">Открыть меню</span>
+				<!-- <span class="sr-only">Открыть меню</span> -->
 				<span></span>
 				<span></span>
 				<span></span>
 			</button>
 			<nav class="menu__body">
 				<ul class="menu__list">
-					<li>
+					<li class="menu__item">
 						<a class="menu__link _goto-block" href="#advantages">Преимущества</a>
 					</li>
 
-					<li>
+					<li class="menu__item">
 						<a class="menu__link _goto-block" href="#hits">Хиты продаж</a>
 					</li>
 
-					<li>
+					<li class="menu__item">
 						<a class="menu__link _goto-block" href="#dellivery">Доставка</a>
 					</li>
 
-					<li>
+					<li class="menu__item">
 						<a class="menu__link _goto-block" href="#contacts">Контакты</a>
 					</li>
 				</ul>
-				<a class="menu__callback _icon-phone" href="#callback">Заказать обратный звонок</a>
+
+				<button class="menu__callback" type="button">
+					<span class="_icon-phone  "></span>
+					<p>
+						Заказать обратный звонок
+					</p>
+				</button>
+
 				<ul class="menu__phones">
+					<span class="menu__arrow">тел.</span>
 					<li class="menu__phone">
-						<a href="tel:+89090952218" class="menu__tel">8 (909) 095 22 18</a>
+						<a class="menu__tel" href="tel:+89090952218">8 (909) 095 22 18</a>
 					</li>
 					<li class="menu__phone">
-						<a href="tel:+89194000725" class="menu__tel">8 (919) 400 07 25</a>
+						<a class="menu__tel" href="tel:+89194000725">8 (919) 400 07 25</a>
 					</li>
 				</ul>
 			</nav>
 		</div>
 	</div>
+	<!-- </div> -->
+
 </header>

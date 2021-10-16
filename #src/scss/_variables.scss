@@ -1,0 +1,33 @@
+$minWidth: 320px;
+$maxWidth: 1920;
+$maxWidthContainer: 1140;
+
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+// $screen-xl: $maxWidthContainer + 12;
+// $screen-lg: 991.98;
+// $screen-md: 767.98;
+// $screen-sm: 479.98;
+
+$black-000: #000;
+$black-200: #2c2c2c;
+$black-600: #b8b3ae;
+
+$green-300: #016f01;
+
+$teal-400: #046860;
+$teal-450: rgba(4, 104, 96, 80%);
+$teal-970: rgba(4, 104, 96, 99%);
+
+$white: #fff;
+$white-400: #f5efe8;
+
+$hoverTime: 0.5s;
+
+// Шрифт по умолчанию ===================
+$fontFamily: "Ubuntu";
+$fontSize: 18;
+// ======================================

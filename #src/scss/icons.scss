@@ -29,6 +29,7 @@
 ._icon-check:before {
 	content: "\1f5f8";
 	color: $teal-400;
+	margin-right: 20px;
 }
 ._icon-medical-mask:before {
 	content: "\1f637";
@@ -38,22 +39,33 @@
 }
 ._icon-phone:before {
 	content: "\1f4de";
-	color: $teal-400;
+	display: inline-block;
+	color: $black-200;
+	margin-right: 8px;
+	text-decoration: none;
+	transition: all $hoverTime ease;
+
+	@include md {
+		color: $black-200;
+	}
 }
 ._icon-size:before {
 	content: "\1f4cf";
 }
 ._icon-telegram:before {
 	content: "\1f6ea";
+	color: $black-000;
 }
 ._icon-viber:before {
 	content: "\2706";
+	color: $black-000;
 }
 ._icon-washer:before {
 	content: "\1f6b0";
 }
 ._icon-whatsapp:before {
 	content: "\1f4ac";
+	color: $black-000;
 }
 ._icon-www:before {
 	content: "\1f310";

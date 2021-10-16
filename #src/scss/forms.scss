@@ -18,16 +18,26 @@
 
 //<BUTTONS (a.btn+tab)>====================================================================================================
 .button {
-	display: inline-flex;
-	// border: 1px solid $teal-400;
-	padding: 0px 0px;
+	display: block;
+	max-width: 215px;
+	width: 100%;
+	text-align: center;
+	border-radius: 30px;
+	font-size: 20px;
+	overflow: hidden;
+	background-color: $teal-400;
+	color: $white;
+	padding: 14px 6px 13px 6px;
 	transition: all $hoverTime ease;
+
 	@media (any-hover: hover) {
 		&:hover {
 			background-color: $teal-450;
-			box-shadow: 0 0 4px 2px #000;
+			background-color: $green-300;
+			// box-shadow: 0 0 4px 2px #000;
 		}
 	}
+
 	&._fw {
 		width: 100%;
 	}
