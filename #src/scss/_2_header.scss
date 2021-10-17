@@ -3,7 +3,6 @@
 	position: fixed;
 	top: 20px;
 	z-index: 7;
-	// background-color: tomato;
 	transition: all $hoverTime ease;
 
 	@include xl {
@@ -149,7 +148,7 @@
 			flex-direction: column;
 			align-items: start;
 			background-color: $teal-970;
-			padding: 140px 20px 30px;
+			padding: 0 20px 30px;
 		}
 
 		@include sm {
@@ -178,7 +177,7 @@
 		@include md {
 			flex-direction: column;
 			align-items: start;
-			padding: 0;
+			padding: 170px 0 0 0;
 			margin: 0 0 50px;
 		}
 
@@ -263,13 +262,6 @@
 		}
 
 		@include xl {
-			// display: block;
-			// padding: 0 0 0 35px;
-			& + p {
-				// justify-content: flex-start;
-				// align-self: start;
-				// display: none;
-			}
 		}
 
 		@include lg {
@@ -300,6 +292,7 @@
 
 	&__recvest {
 		transition: all $hoverTime ease;
+
 		@include xl {
 			text-align: start;
 		}
@@ -318,6 +311,16 @@
 
 		@include md {
 			display: block;
+
+			position: relative;
+			width: 100%;
+			right: 0;
+			left: 0;
+			top: 0;
+			padding: 15px 5px 5px;
+			opacity: 1;
+			visibility: visible;
+			pointer-events: all;
 		}
 	}
 
