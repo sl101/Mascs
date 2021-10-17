@@ -1,8 +1,9 @@
 .header {
 	width: 100%;
-	padding: 20px 0 7px 0;
 	position: fixed;
+	top: 20px;
 	z-index: 7;
+	// background-color: tomato;
 	transition: all $hoverTime ease;
 
 	@include xl {
@@ -22,7 +23,7 @@
 		position: absolute;
 		z-index: 0;
 		background-color: $white-400;
-		top: 50px;
+		top: 30px;
 		left: 50px;
 		right: 50px;
 		border-radius: 30px;
@@ -37,7 +38,7 @@
 
 		@include md {
 			display: none;
-			z-index: 9;
+			// z-index: 9;
 		}
 
 		@include sm {
@@ -47,9 +48,6 @@
 	// .header__content
 
 	&__content {
-		position: relative;
-		// z-index: 1;
-		// align-self: start;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -61,7 +59,6 @@
 		}
 
 		@include md {
-			// position: static;
 		}
 
 		@include sm {
@@ -73,6 +70,8 @@
 	&__logo {
 		position: relative;
 		z-index: 9;
+		max-width: 64px;
+
 		@include xl {
 		}
 
@@ -80,8 +79,6 @@
 		}
 
 		@include md {
-			position: absolute;
-			top: 0px;
 		}
 
 		@include sm {
@@ -90,38 +87,8 @@
 
 	// .header__menu
 
-	&__menu {
-		// border: 1px solid red;
-		// max-width: 100%;
-		position: relative;
-		width: 100%;
-		// z-index: 1;
-		// flex-wrap: 100%;
-		// flex-grow: 1;
-		// flex-shrink: 1;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-
-		@include xl {
-		}
-
-		@include lg {
-		}
-
-		@include md {
-			justify-content: flex-end;
-			// position: static;
-			// position: absolute;
-			top: 20px;
-			right: 10px;
-			// left: 0;
-			// background-color: $black-200;
-		}
-
-		@include sm {
-		}
-	}
+	// &__menu {
+	// }
 
 	&._scroll {
 		padding: 5px 0;
@@ -138,17 +105,16 @@
 }
 
 .menu {
-	// border: 1px solid red;
-	// .menu__image
+	width: 100%;
+	display: flex;
+	align-items: center;
 
-	&__image {
-		max-width: 64px;
+	@include md {
+		justify-content: flex-end;
 	}
 
-	// .menu__icon
-
-	&__icon {
-	}
+	// &__icon {
+	// }
 
 	// .menu__body
 
@@ -164,10 +130,11 @@
 		transition: all $hoverTime ease;
 
 		@include xl {
-			justify-content: start;
+			// justify-content: start;
 		}
 
 		@include lg {
+			justify-content: space-evenly;
 		}
 
 		@include md {
@@ -222,6 +189,8 @@
 	// .menu__item
 
 	&__item {
+		position: relative;
+
 		&:not(:last-child) {
 			margin: 0 30px 0 0;
 		}
@@ -260,13 +229,11 @@
 
 	&__callback {
 		display: flex;
-
-		// font-weight: 500;
+		flex-wrap: wrap;
 		text-decoration: transparent;
 		color: $black-200;
 		background-color: transparent;
-		// text-decoration: underline;
-		// color: $teal-400;
+		align-items: center;
 		padding: 0 0 0 20px;
 		transition: all $hoverTime ease;
 
@@ -282,6 +249,12 @@
 				}
 			}
 
+			&:hover .menu__recvest {
+				opacity: 1;
+				visibility: visible;
+				pointer-events: all;
+			}
+
 			&:active {
 			}
 
@@ -290,13 +263,21 @@
 		}
 
 		@include xl {
-			padding: 0 0 0 35px;
-			& p {
-				display: none;
+			// display: block;
+			// padding: 0 0 0 35px;
+			& + p {
+				// justify-content: flex-start;
+				// align-self: start;
+				// display: none;
 			}
 		}
 
 		@include lg {
+			position: relative;
+
+			&:hover {
+				text-decoration: none;
+			}
 		}
 
 		@include md {
@@ -317,39 +298,49 @@
 		}
 	}
 
-	// .menu__phones
-
-	&__phones {
-		// align-items: flex-end;
-		// transform: translate(-5px, 0);
-
+	&__recvest {
+		transition: all $hoverTime ease;
 		@include xl {
-			flex-grow: 1;
-			// flex-shrink: 1;
-			// align-self: end;
-			text-align: end;
+			text-align: start;
 		}
 
 		@include lg {
+			position: absolute;
+			width: 350%;
+			right: 0;
+			left: -50%;
+			top: 100%;
+			padding: 15px 5px 5px;
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
 		}
 
 		@include md {
-			font-size: 28px;
-			// transform: translate(0, 0);
+			display: block;
 		}
+	}
 
-		@include sm {
+	&__back {
+		transition: all $hoverTime ease;
+		@include xl {
+			display: block;
+		}
+		@include lg {
+			display: inline-block;
 		}
 	}
 
 	// .menu__arrow
 	&__arrow {
-		display: none;
+		display: block;
+		color: $black-200;
+		transition: all $hoverTime ease;
+
 		@include xl {
 		}
 
 		@include lg {
-			display: block;
 			position: relative;
 			padding: 0 30px 0 0;
 			cursor: pointer;
@@ -362,11 +353,18 @@
 				}
 			}
 
+			&:hover > .menu__phones {
+				opacity: 1;
+				visibility: visible;
+				pointer-events: all;
+			}
+
 			&:active {
 			}
 
 			&:focus {
 			}
+
 			&::after {
 				content: "";
 				position: absolute;
@@ -379,11 +377,72 @@
 				border-right: 10px solid transparent;
 				border-top: 15px solid $black-200;
 				transition: all $hoverTime ease;
+
+				@include md {
+					display: none;
+				}
 			}
 		}
 
 		@include md {
+			display: block;
+		}
+	}
+
+	// .menu__tel
+
+	&__tel {
+		display: none;
+
+		@include lg {
+			display: block;
+		}
+
+		@include md {
 			display: none;
+		}
+	}
+
+	// .menu__phones
+
+	&__phones {
+		display: block;
+
+		// align-items: flex-end;
+		// transform: translate(-5px, 0);
+		transition: all $hoverTime ease;
+
+		@include xl {
+			flex-grow: 1;
+			// flex-shrink: 1;
+			// align-self: end;
+			text-align: end;
+		}
+
+		@include lg {
+			// display: none;
+			position: absolute;
+			// max-width: 200px;
+			width: 250%;
+			right: 0;
+			left: -150%;
+			top: 100%;
+			padding: 15px 5px 5px;
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+		}
+
+		@include md {
+			position: relative;
+			width: 100%;
+			left: 0;
+			top: 0;
+			padding: 0;
+			font-size: 28px;
+			opacity: 1;
+			visibility: visible;
+			pointer-events: all;
 		}
 
 		@include sm {
@@ -393,6 +452,9 @@
 	// .menu__phone
 
 	&__phone {
+		display: block;
+		// width: 100%;
+		transition: all $hoverTime ease;
 		&:not(:last-child) {
 			margin: 0 0 5px;
 		}
@@ -401,11 +463,11 @@
 		}
 
 		@include lg {
-			display: none;
+			// display: none;
 		}
 
 		@include md {
-			display: block;
+			// display: block;
 			&:not(:last-child) {
 				margin: 0 0 25px;
 			}
@@ -415,9 +477,10 @@
 		}
 	}
 
-	// .menu__tel
+	// .menu__number
 
-	&__tel {
+	&__number {
+		display: block;
 		font-weight: 700;
 		color: $black-200;
 		transition: all $hoverTime ease;
@@ -477,6 +540,34 @@
 					bottom: calc(50% - 1px);
 				}
 			}
+		}
+	}
+}
+
+._icon-phone {
+	display: inline-block;
+	color: $black-200;
+	margin-right: 8px;
+	text-decoration: none;
+	transition: all $hoverTime ease;
+
+	@include xl {
+		margin-right: 15px;
+		font-weight: 700;
+	}
+
+	@include md {
+		color: $black-200;
+	}
+
+	@include md-min {
+		&:hover {
+		}
+
+		&:active {
+		}
+
+		&:focus {
 		}
 	}
 }

@@ -39,15 +39,20 @@
 }
 ._icon-phone:before {
 	content: "\1f4de";
-	display: inline-block;
-	color: $black-200;
-	margin-right: 8px;
-	text-decoration: none;
-	transition: all $hoverTime ease;
+	// display: inline-block;
+	// color: $black-200;
+	// margin-right: 8px;
+	// text-decoration: none;
+	// transition: all $hoverTime ease;
 
-	@include md {
-		color: $black-200;
-	}
+	// @include xl {
+	// 	margin-right: 15px;
+	// 	font-weight: 700;
+	// }
+
+	// @include md {
+	// 	color: $black-200;
+	// }
 }
 ._icon-size:before {
 	content: "\1f4cf";
