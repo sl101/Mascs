@@ -3,6 +3,7 @@
 	position: fixed;
 	top: 20px;
 	z-index: 7;
+	// padding: 5px 0;
 	transition: all $hoverTime ease;
 
 	@include xl {
@@ -12,6 +13,8 @@
 	}
 
 	@include md {
+		// background-color: $white-400;
+		top: 5px;
 	}
 
 	@include sm {
@@ -21,12 +24,14 @@
 		content: "";
 		position: absolute;
 		z-index: 0;
+		top: 10px;
+		left: 10px;
+		right: 10px;
+		min-height: 35px;
 		background-color: $white-400;
-		top: 30px;
-		left: 50px;
-		right: 50px;
 		border-radius: 30px;
-		box-shadow: 0 0 40px 40px $white-400;
+		box-shadow: 0 0 20px 20px $white-400;
+		opacity: 1;
 		transition: all $hoverTime ease;
 
 		@include xl {
@@ -36,8 +41,8 @@
 		}
 
 		@include md {
+			// box-shadow: 0 0 20px 20px $white-400;
 			display: none;
-			// z-index: 9;
 		}
 
 		@include sm {
@@ -61,6 +66,27 @@
 		}
 
 		@include sm {
+		}
+
+		&::before {
+			content: "";
+
+			@include md {
+				position: absolute;
+				z-index: 7;
+				top: 0;
+				// left: 10px;
+				// right: 22px;
+				left: 0;
+				right: 0;
+				// width: calc(100%-22px);
+				min-height: 50px;
+				background-color: $white-400;
+				// border-radius: 30px;
+				box-shadow: 0 0 10px 10px $white-400;
+				opacity: 1;
+				transition: all $hoverTime ease;
+			}
 		}
 	}
 
@@ -90,15 +116,11 @@
 	// }
 
 	&._scroll {
-		padding: 5px 0;
-		&::before {
-			top: 15px;
-			left: 10px;
-			right: 10px;
-			min-height: 35px;
-			background-color: $white;
-			box-shadow: 0 0 20px 20px $white;
-			opacity: 1;
+		@include md-min {
+			top: 0;
+			&::before {
+				top: 15px;
+			}
 		}
 	}
 }
@@ -109,6 +131,8 @@
 	align-items: center;
 
 	@include md {
+		// padding-top: 100px;
+		// padding: 100px 20px 20px 30px;
 		justify-content: flex-end;
 	}
 
@@ -120,9 +144,7 @@
 	&__body {
 		position: relative;
 		z-index: 1;
-		// max-width: 100%;
 		width: 100%;
-		// flex: 1 1 100%;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -140,15 +162,17 @@
 			position: fixed;
 			top: 0;
 			left: 0;
-			width: 100%;
+			display: block;
+			// width: 100%;
 			height: 100%;
-			z-index: 8;
+			// z-index: 1;
+			// flex-direction: column;
 			overflow: auto;
 			transform: translate(-100%, 0);
-			flex-direction: column;
-			align-items: start;
+			// flex-direction: column;
+			// align-items: start;
 			background-color: $teal-970;
-			padding: 0 20px 30px;
+			padding: 100px 20px 30px;
 		}
 
 		@include sm {
@@ -177,7 +201,7 @@
 		@include md {
 			flex-direction: column;
 			align-items: start;
-			padding: 170px 0 0 0;
+			padding: 0 0 0 0;
 			margin: 0 0 50px;
 		}
 
