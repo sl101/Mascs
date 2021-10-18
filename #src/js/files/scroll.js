@@ -252,7 +252,7 @@ function full_scroll_to_sector(pos) {
 function full_scroll_pagestart() { }
 function full_scroll_pageend() { }
 
-//ScrollOnClick (Navigation)
+//ScrollOnClick (Navigation) +++++++++++++++++++++++++++++++++++++++++
 let link = document.querySelectorAll('._goto-block');
 if (link) {
 	let blocks = [];
@@ -301,8 +301,6 @@ if (link) {
 }
 //ScrollOnClick (Simple)
 let goto_links = document.querySelectorAll('._goto');
-let burger = document.querySelector('.icon-menu');
-let menuBody = document.querySelector('.menu__body');
 if (goto_links) {
 	for (let index = 0; index < goto_links.length; index++) {
 		let goto_link = goto_links[index];
@@ -329,11 +327,6 @@ function _goto(target_block, speed, offset = 100) {
 	};
 	let scr = new SmoothScroll();
 	scr.animateScroll(target_block, '', options);
-	if(burger.classList.contains('_active')) {
-		document.body.classList.remove('_lock');
-		burger.classList.remove('_active');
-		menuBody.classList.remove('_active');
-	}
 }
 
 //SameFunctions
