@@ -16,7 +16,9 @@
 }
 a:focus,
 a:active {
-	// outline: none;
+	outline: none;
+	border: 1px solid $teal-450;
+	border-radius: 5px;
 }
 aside,
 nav,

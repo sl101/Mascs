@@ -1,0 +1,13 @@
+.networks {
+	// .networks__list
+	&__list {
+		margin: 0 0 -10px;
+	}
+
+	// .networks__link
+	&__link {
+		@include sm {
+			margin-bottom: 10px;
+		}
+	}
+}

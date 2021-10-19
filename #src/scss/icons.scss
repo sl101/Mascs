@@ -29,7 +29,13 @@
 ._icon-check:before {
 	content: "\1f5f8";
 	color: $teal-400;
-	margin-right: 20px;
+	position: absolute;
+	left: 0;
+
+	@include sm {
+		position: absolute;
+		left: 0;
+	}
 }
 ._icon-medical-mask:before {
 	content: "\1f637";
@@ -39,20 +45,20 @@
 }
 ._icon-phone:before {
 	content: "\1f4de";
-	// display: inline-block;
-	// color: $black-200;
-	// margin-right: 8px;
-	// text-decoration: none;
-	// transition: all $hoverTime ease;
+	display: inline-block;
+	color: $black-200;
+	margin-right: 8px;
+	text-decoration: none;
+	transition: all $hoverTime ease;
 
-	// @include xl {
-	// 	margin-right: 15px;
-	// 	font-weight: 700;
-	// }
+	@include xl {
+		margin-right: 15px;
+		font-weight: 700;
+	}
 
-	// @include md {
-	// 	color: $black-200;
-	// }
+	@include md {
+		color: $black-200;
+	}
 }
 ._icon-size:before {
 	content: "\1f4cf";
@@ -60,10 +66,12 @@
 ._icon-telegram:before {
 	content: "\1f6ea";
 	color: $black-000;
+	font-size: 30px;
 }
 ._icon-viber:before {
 	content: "\2706";
 	color: $black-000;
+	font-size: 30px;
 }
 ._icon-washer:before {
 	content: "\1f6b0";
@@ -71,12 +79,17 @@
 ._icon-whatsapp:before {
 	content: "\1f4ac";
 	color: $black-000;
+	font-size: 30px;
 }
 ._icon-www:before {
 	content: "\1f310";
 }
 ._icon-close:before {
 	content: "\1f5d9";
+
+	@include sm {
+		font-size: 12px;
+	}
 }
 ._icon-p-left:before {
 	content: "\2329";

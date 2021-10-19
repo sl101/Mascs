@@ -1,0 +1,67 @@
+.request {
+	max-width: 825px;
+	background-color: $white-400;
+	border-radius: 10px;
+	padding: 63px 60px 60px;
+	box-shadow: 0 0 10px 10px $white-400;
+
+	// .request__title
+	&__title {
+		font-family: "Roboto";
+		font-weight: 700;
+		font-size: 30px;
+		margin: 0 0 12px;
+	}
+
+	// .request__description
+	&__description {
+		display: flex;
+		justify-content: space-between;
+		line-height: 1.2;
+		margin: 0 0 22px;
+	}
+
+	// .request__announcement
+	&__announcement {
+		max-width: 200px;
+	}
+
+	// .request__block
+	&__block {
+		display: flex;
+		justify-content: space-between;
+		margin: 10px 50px 0 0;
+	}
+
+	// .request__note
+	&__note {
+		max-width: 156px;
+		font-size: 12px;
+		margin: 0 20px 0;
+	}
+
+	// .request__form
+	&__form {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 0 7px;
+	}
+
+	// .request__input
+	&__input {
+		max-width: 215px;
+		min-height: 50px;
+		background-color: transparent;
+		border: 1px solid $teal-450;
+		border-radius: 20px;
+		margin: 0 30px 0 0;
+		&::placeholder {
+			font-size: 12px;
+		}
+	}
+
+	// .request__attention
+	&__attention {
+		font-size: 12px;
+	}
+}

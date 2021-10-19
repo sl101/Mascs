@@ -1,7 +1,6 @@
 .hero {
 	max-width: 100%;
 	min-height: 100%;
-	// min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -11,7 +10,6 @@
 	// .hero__content
 	&__content {
 		display: flex;
-		// flex: 1 1 100%;
 		align-items: center;
 	}
 
@@ -22,12 +20,10 @@
 
 	// .hero__inner
 	&__inner {
-		// max-width: 520px;
 		max-width: 50%;
-		// padding: 0px 0 0 13px;
-		background-color: $white;
+		background-color: $white-400;
 		margin: 0 0 0 20px;
-		box-shadow: 0 0 50px 60px #fff;
+		box-shadow: 0 0 50px 60px $white-400;
 
 		@include xl {
 			position: relative;
@@ -35,29 +31,25 @@
 			opacity: 0.8;
 			margin: 0 auto;
 			max-width: 520px;
-			box-shadow: 0 0 40px 50px #fff;
-		}
-
-		@include lg {
-		}
-
-		@include md {
-		}
-
-		@include sm {
+			box-shadow: 0 0 40px 50px $white-400;
 		}
 	}
 
 	// .hero__offer
 
-	&__offer {
-	}
+	// &__offer {
+	// }
 
 	// .hero__title
 	&__title {
 		font-weight: 700;
 		font-size: 42px;
 		margin: 0 0 20px;
+
+		@include sm {
+			font-size: 36px;
+			text-align: center;
+		}
 	}
 
 	// .hero__subtitle
@@ -68,24 +60,40 @@
 		font-size: 36px;
 		line-height: 1.2;
 		margin: 0 0 30px;
+
+		@include sm {
+			font-size: 28px;
+			text-align: center;
+		}
 	}
 
 	// .hero__allocation
-
 	&__allocation {
 		color: $teal-400;
 		font-size: 36px;
+		@include xl {
+		}
+
+		@include sm {
+			font-size: 28px;
+			text-align: center;
+		}
 	}
 
 	// .hero__descriptions
-
 	&__descriptions {
+		position: relative;
 		font-size: 20px;
 		margin: 0 0 31px;
+		padding-left: 45px;
+
+		@include sm {
+			font-size: 16px;
+			padding-left: 30px;
+		}
 	}
 
 	// .hero__description
-
 	&__description {
 		&:not(:last-child) {
 			margin: 0 0 13px;
@@ -93,28 +101,40 @@
 	}
 
 	// .hero__order
-
 	&__order {
 		max-width: 495px;
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
+
+		@include sm {
+			flex-direction: column;
+		}
 	}
 
 	// .hero__button
-
 	&__button {
 		max-width: 291px;
-		padding: 18px 6px 17px 6px;
+		padding: 15px 6px;
+
+		@include sm {
+			max-width: 215px;
+			padding: 10px 6px;
+			margin: 0 auto 30px;
+		}
 	}
 
 	// .hero__contacts
-
 	&__contacts {
 		align-self: flex-end;
+		margin: 20px 0 0 10px;
+
+		@include sm {
+			margin: 0 auto 20px;
+		}
 	}
 
 	// .hero__view
-
 	&__view {
 		position: relative;
 		flex: 0 0 50%;
@@ -122,22 +142,7 @@
 
 		@include xl {
 			flex: 0 0 100%;
-			// visibility: hidden;
-			// opacity: 0.5;
 			z-index: 0;
-		}
-
-		@include lg {
-		}
-
-		@include md {
-		}
-
-		@include sm {
-		}
-
-		// .hero__covid
-		&__covid {
 		}
 
 		.covid-one {
@@ -159,15 +164,6 @@
 				display: none;
 			}
 
-			@include lg {
-			}
-
-			@include md {
-			}
-
-			@include sm {
-			}
-
 			&__picture {
 				max-width: 48%;
 				animation: rightRotate 80s infinite linear;
@@ -181,15 +177,6 @@
 			@include xl {
 				left: 30%;
 				top: 20px;
-			}
-
-			@include lg {
-			}
-
-			@include md {
-			}
-
-			@include sm {
 			}
 
 			&__picture {
@@ -240,15 +227,6 @@
 				display: none;
 			}
 
-			@include lg {
-			}
-
-			@include md {
-			}
-
-			@include sm {
-			}
-
 			&__picture {
 				animation: movingUp 60s infinite linear;
 				max-width: 48%;
@@ -263,15 +241,6 @@
 			@include xl {
 				left: 60%;
 				top: 20%;
-			}
-
-			@include lg {
-			}
-
-			@include md {
-			}
-
-			@include sm {
 			}
 
 			&__picture {
@@ -290,15 +259,6 @@
 				bottom: 0%;
 			}
 
-			@include lg {
-			}
-
-			@include md {
-			}
-
-			@include sm {
-			}
-
 			&__picture {
 				animation: movingUp 80s infinite linear;
 				max-width: 66%;
@@ -307,19 +267,9 @@
 	}
 
 	// .hero__image
-
 	&__image {
 		@include xl {
 			visibility: hidden;
-		}
-
-		@include lg {
-		}
-
-		@include md {
-		}
-
-		@include sm {
 		}
 	}
 }
@@ -331,20 +281,13 @@
 		justify-content: space-between;
 	}
 
-	// .networks__contact
-
-	&__contact {
-	}
-
 	// .networks__link
-
 	&__link {
 		display: block;
 		font-size: 32px;
 	}
 
 	// .networks__note
-
 	&__note {
 		font-size: 10px;
 		color: $black-200;

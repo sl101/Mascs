@@ -22,20 +22,34 @@
 	max-width: 215px;
 	width: 100%;
 	text-align: center;
-	border-radius: 30px;
+	border-radius: 20px;
 	font-size: 20px;
 	overflow: hidden;
 	background-color: $teal-400;
+	border: 3px solid transparent;
 	color: $white;
-	padding: 14px 6px 13px 6px;
+	padding: 10px 6px;
 	transition: all $hoverTime ease;
 
-	@media (any-hover: hover) {
-		&:hover {
-			background-color: $teal-450;
-			background-color: $green-300;
-			// box-shadow: 0 0 4px 2px #000;
+	@include md-min {
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $teal-200;
+				border-color: $teal-400;
+			}
 		}
+	}
+
+	@include xl {
+	}
+
+	@include lg {
+	}
+
+	@include md {
+	}
+
+	@include sm {
 	}
 
 	&._fw {
@@ -148,7 +162,7 @@ textarea {
 	}
 }
 .input {
-	border-radius: 0 !important;
+	// border-radius: 0 !important;
 	width: 100%;
 	display: block;
 	padding: 0px 20px;
