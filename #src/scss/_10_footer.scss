@@ -1,7 +1,10 @@
 .footer {
 	background-color: $teal-300;
 	padding: 40px 0;
-	// margin-top: -2px;
+
+	@include md {
+		padding: 20px 0;
+	}
 
 	// .footer__list
 	&__list {
@@ -9,6 +12,12 @@
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
+
+		@include md {
+			flex-direction: column;
+			text-align: center;
+			align-items: center;
+		}
 	}
 
 	// .footer__unit
@@ -17,16 +26,35 @@
 		font-weight: 400;
 		color: $white-400;
 
+		&--logo {
+			@include md {
+				order: 2;
+			}
+		}
+
 		&--phones {
 			max-width: 425px;
 			width: 100%;
 			display: flex;
-			justify-content: space-between;
 			flex-direction: column;
+			justify-content: space-between;
+
+			@include lg {
+				max-width: 300px;
+			}
+
+			@include md {
+				order: 1;
+				margin: 0 0 30px;
+			}
 		}
 
 		&--www {
 			align-self: end;
+
+			@include lg {
+				display: none;
+			}
 		}
 	}
 
@@ -48,16 +76,37 @@
 		justify-content: space-between;
 		margin-bottom: 10px;
 		max-width: 320px;
+
+		@include lg {
+			position: static;
+			top: 0;
+			left: 0;
+			width: auto;
+			opacity: 1;
+			visibility: visible;
+			pointer-events: all;
+			padding: 0;
+		}
+
+		@include md {
+			font-size: 18px;
+			flex-direction: column;
+			align-self: center;
+		}
+	}
+
+	&__phone {
+		@include md {
+			&:not(:last-child) {
+				margin: 0 0 5px;
+			}
+		}
 	}
 
 	// .footer__number
 	&__number {
 		font-weight: 400;
 		color: $white;
-	}
-
-	// .footer__contact
-	&__contact {
 	}
 
 	// .footer__email

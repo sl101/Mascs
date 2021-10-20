@@ -4,17 +4,38 @@
 
 	// .contacts__content
 	&__content {
+		position: relative;
+		z-index: 3;
 		display: flex;
 		justify-content: start;
 		align-items: center;
 		padding: 120px 0;
+
+		@include lg {
+			flex-direction: column;
+		}
+
+		@include sm {
+			padding: 30px 0 90px;
+		}
 	}
 
 	// .contacts__img
 	&__img {
 		max-width: 635px;
-		min-height: 480px;
 		margin: 0 80px 0 0;
+
+		@include xl {
+			max-width: 550px;
+		}
+
+		@include lg {
+			margin: 0 0 100px;
+		}
+
+		@include sm {
+			max-width: 260px;
+		}
 	}
 
 	// .contacts__image
@@ -30,6 +51,12 @@
 		background-color: $white-400;
 		box-shadow: 0 0 50px 60px $white-400;
 		padding: 20px 10px;
+
+		@include xl {
+			max-width: 255px;
+			padding: 10px 10px;
+			box-shadow: 0 0 50px 60px $white-400;
+		}
 	}
 
 	// .contacts__title
@@ -37,13 +64,7 @@
 		margin: 0 0 33px;
 	}
 
-	// .contacts__list
-
-	&__list {
-	}
-
 	// .contacts__unit
-
 	&__unit {
 		line-height: 1.2;
 		&:not(:last-child) {
@@ -61,7 +82,6 @@
 	}
 
 	// .contacts__name
-
 	&__name {
 		display: inline-block;
 		max-width: 92px;
@@ -76,40 +96,64 @@
 	}
 
 	// .contacts__phones
-
 	&__phones {
+		text-align: left;
+
+		@include lg {
+			position: static;
+			top: 0;
+			left: 0;
+			width: auto;
+			opacity: 1;
+			visibility: visible;
+			pointer-events: all;
+			padding: 0;
+		}
+
+		@include md {
+			font-size: 18px;
+		}
 	}
 
 	// .contacts__phone
-
 	&__phone {
+		display: block;
+
+		@include md {
+			&:not(:last-child) {
+				margin: 0 0 5px;
+			}
+		}
 	}
 
 	// .contacts__number
-
 	&__number {
 		font-weight: 400;
 	}
 
 	// .contacts__email
-
 	&__email {
 		color: $black-200;
 	}
 
-	// .contacts__networks
-
-	&__networks {
-	}
-
 	.covid-10 {
-		bottom: -70px;
+		bottom: -80px;
 		right: 70px;
 		overflow: hidden;
+		z-index: 2;
+
+		@include md {
+			bottom: -30px;
+			right: 0;
+		}
 
 		// .covid-10__picture
 		&__picture {
 			animation: leftRotate 60s infinite linear;
+
+			@include md {
+				max-width: 50%;
+			}
 		}
 	}
 
@@ -118,8 +162,14 @@
 		left: 150px;
 		z-index: 2;
 
+		@include md {
+			top: -150px;
+			left: -90px;
+		}
+
 		// .covid-11__picture
 		&__picture {
+			max-width: 70%;
 			animation: movingUp 80s infinite linear;
 		}
 	}
