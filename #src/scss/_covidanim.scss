@@ -67,3 +67,24 @@
 		transform: translate(0, 0);
 	}
 }
+
+@keyframes movingLineLong {
+	0% {
+		transform: translate(0, 0);
+	}
+	20% {
+		transform: translate(25px, -5px);
+	}
+	40% {
+		transform: translate(40, 10);
+	}
+	60% {
+		transform: translate(25px, 25px);
+	}
+	80% {
+		transform: translate(-25px, 15px);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}

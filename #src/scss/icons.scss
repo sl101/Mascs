@@ -25,6 +25,13 @@
 
 ._icon-camera:before {
 	content: "\1f4f8";
+	display: block;
+	font-size: 60px;
+	margin: 0 0 20px;
+
+	@include lg {
+		text-align: center;
+	}
 }
 ._icon-check:before {
 	content: "\1f5f8";
@@ -39,9 +46,23 @@
 }
 ._icon-medical-mask:before {
 	content: "\1f637";
+	display: block;
+	font-size: 60px;
+	margin: 0 0 20px;
+
+	@include lg {
+		text-align: center;
+	}
 }
 ._icon-pet:before {
 	content: "\1f638";
+	display: block;
+	font-size: 60px;
+	margin: 0 0 20px;
+
+	@include lg {
+		text-align: center;
+	}
 }
 ._icon-phone:before {
 	content: "\1f4de";
@@ -62,6 +83,13 @@
 }
 ._icon-size:before {
 	content: "\1f4cf";
+	display: block;
+	font-size: 60px;
+	margin: 0 0 20px;
+
+	@include lg {
+		text-align: center;
+	}
 }
 ._icon-telegram:before {
 	content: "\1f6ea";
@@ -75,6 +103,13 @@
 }
 ._icon-washer:before {
 	content: "\1f6b0";
+	display: block;
+	font-size: 60px;
+	margin: 0 0 20px;
+
+	@include lg {
+		text-align: center;
+	}
 }
 ._icon-whatsapp:before {
 	content: "\1f4ac";
@@ -83,6 +118,13 @@
 }
 ._icon-www:before {
 	content: "\1f310";
+	display: block;
+	font-size: 60px;
+	margin: 0 0 20px;
+
+	@include lg {
+		text-align: center;
+	}
 }
 ._icon-close:before {
 	content: "\1f5d9";
