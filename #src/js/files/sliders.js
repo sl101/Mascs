@@ -61,25 +61,18 @@ if (sliderScrollItems.length > 0) {
 
 function sliders_bild_callback(params) { }
 
-let hits_slider = new Swiper('.hits-slider', {
-	/*
-	effect: 'fade',
-	autoplay: {
-		delay: 3000,
-		disableOnInteraction: false,
-	},
-	*/
+// ++++++++++++++++++++++++++++++++++++++++++++++++
+let hits_slider = new Swiper('.hits__slider', {
+	
 	observer: true,
 	observeParents: true,
 	slidesPerView: 1,
-	spaceBetween: 0,
+	spaceBetween: 200,
 	autoHeight: true,
-	speed: 800,
-	//touchRatio: 0,
-	//simulateTouch: false,
-	//loop: true,
-	//preloadImages: false,
-	//lazy: true,
+	speed: 1200,
+	touchAngel: 45,
+	toucRatio: 1,
+	initialSlide: 2,
 
 	// Dotts
 	pagination: {
@@ -92,36 +85,12 @@ let hits_slider = new Swiper('.hits-slider', {
 		prevEl: '.hits__prev',
 		nextEl: '.hits__next',
 	},
-	/*
-	breakpoints: {
-		320: {
-			slidesPerView: 1,
-			spaceBetween: 0,
-			autoHeight: true,
-		},
-		768: {
-			slidesPerView: 2,
-			spaceBetween: 20,
-		},
-		992: {
-			slidesPerView: 3,
-			spaceBetween: 20,
-		},
-		1268: {
-			slidesPerView: 4,
-			spaceBetween: 30,
-		},
-	},
-	*/
+
 	on: {
 		lazyImageReady: function () {
 			ibg();
 		},
 	}
-	// And if we need scrollbar
-	//scrollbar: {
-	//	el: '.swiper-scrollbar',
-	//},
 });
 
 let popular_slider = new Swiper('.popular-slider', {

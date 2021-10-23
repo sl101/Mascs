@@ -252,6 +252,22 @@ function full_scroll_to_sector(pos) {
 function full_scroll_pagestart() { }
 function full_scroll_pageend() { }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //ScrollOnClick (Navigation) +++++++++++++++++++++++++++++++++++++++++
 let link = document.querySelectorAll('._goto-block');
 if (link) {
@@ -312,7 +328,7 @@ if (goto_links) {
 		});
 	}
 }
-function _goto(target_block, speed, offset = 100) {
+function _goto(target_block, speed, offset = 0) {
 	let header = '';
 	//OffsetHeader
 	// if (window.innerWidth < 992) {
