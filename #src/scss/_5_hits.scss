@@ -202,14 +202,21 @@
 		}
 	}
 
+	&__prev,
+	&__next {
+		&::before {
+			font-weight: 700;
+		}
+	}
+
 	.swiper-button-disabled {
 		color: $white-600;
 	}
 
 	// .hits__pagination
 	&__pagination {
-		display: flex;
 		position: absolute;
+		display: flex;
 		bottom: 170px;
 		right: 30px;
 		cursor: pointer;

@@ -93,7 +93,7 @@ let hits_slider = new Swiper('.hits__slider', {
 	}
 });
 
-let popular_slider = new Swiper('.popular-slider', {
+let popular_slider = new Swiper('.popular__slider', {
 	/*
 	effect: 'fade',
 	autoplay: {
@@ -103,10 +103,11 @@ let popular_slider = new Swiper('.popular-slider', {
 	*/
 	observer: true,
 	observeParents: true,
-	slidesPerView: 1,
-	spaceBetween: 0,
+	slidesPerView: 3,
+	spaceBetween: 30,
 	autoHeight: true,
-	speed: 800,
+	speed: 1200,
+	initialSlide: 2,
 	//touchRatio: 0,
 	//simulateTouch: false,
 	//loop: true,
@@ -124,27 +125,7 @@ let popular_slider = new Swiper('.popular-slider', {
 		prevEl: '.popular__prev',
 		nextEl: '.popular__next',
 	},
-	/*
-	breakpoints: {
-		320: {
-			slidesPerView: 1,
-			spaceBetween: 0,
-			autoHeight: true,
-		},
-		768: {
-			slidesPerView: 2,
-			spaceBetween: 20,
-		},
-		992: {
-			slidesPerView: 3,
-			spaceBetween: 20,
-		},
-		1268: {
-			slidesPerView: 4,
-			spaceBetween: 30,
-		},
-	},
-	*/
+
 	on: {
 		lazyImageReady: function () {
 			ibg();

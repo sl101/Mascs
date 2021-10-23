@@ -1,34 +1,56 @@
 <section class="popular" id="popular">
-	<div class="popular__content _container">
-		<h2 class="popular__title _title">
-			<span class="sr-only">
-				Популярные
-			</span>
-			Популярные
-		</h2>
+	<div class="_container">
+		<div class="popular__content">
 
-		<div class="popular-slider__box">
-			<ul class="popular-slider _swiper">
-				<li class="popular-slider__slide">
+			<h2 class="popular__title _title">
+				<span class="sr-only">
+					Популярные
+				</span>
+				Популярные
+			</h2>
+
+			<div class="covid covid-15">
+				<img class="covid-15__picture" src="img/covid/1.png" alt="Изображение - вирус">
+			</div>
+
+			<ul class="popular__slider _swiper">
+				<li class="popular__slider-slide">
 					@@include('cards/product_1.html',{})
 				</li>
 
-				<li class="popular-slider__slide">
+				<li class="popular__slider-slide">
 					@@include('cards/product_2.html',{})
 				</li>
 
-				<li class="popular-slider__slide">
+				<li class="popular__slider-slide">
 					@@include('cards/product_3.html',{})
+				</li>
+
+				<li class="popular__slider-slide">
+					@@include('cards/product_1.html',{})
+				</li>
+
+				<li class="popular__slider-slide">
+					@@include('cards/product_2.html',{})
+				</li>
+
+				<li class="popular__slider-slide">
+					@@include('cards/product_3.html',{})
+				</li>
+
+				<li class="popular__slider-slide">
+					@@include('cards/product_1.html',{})
 				</li>
 			</ul>
 
-			<div class="popular__nav"></div>
-			<div class="popular__prev"></div>
-			<div class="popular__next"></div>
+			<div class="popular__arrows">
+				<div class="popular__prev _icon-p-left"></div>
+				<div class="popular__next _icon-p-right"></div>
+			</div>
+
+			<div class="popular__rectangle"></div>
+
+			<div class="popular__pagination"></div>
 		</div>
-
-		<div class="popular__pagination"></div>
-	</div>
-
 	</div>
 </section>
