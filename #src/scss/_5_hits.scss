@@ -185,6 +185,7 @@
 		font-size: 26px;
 		color: $teal-200;
 		cursor: pointer;
+		transition: all $hoverTime ease;
 
 		@include xl {
 			left: auto;
@@ -211,6 +212,7 @@
 
 	.swiper-button-disabled {
 		color: $white-600;
+		transition: all $hoverTime ease;
 	}
 
 	// .hits__pagination
@@ -233,6 +235,7 @@
 			height: 10px;
 			border-radius: 50%;
 			background-color: $white-600;
+			transition: all $hoverTime ease;
 
 			&:not(:last-child) {
 				margin-right: 20px;

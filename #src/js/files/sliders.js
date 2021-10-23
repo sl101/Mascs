@@ -94,25 +94,14 @@ let hits_slider = new Swiper('.hits__slider', {
 });
 
 let popular_slider = new Swiper('.popular__slider', {
-	/*
-	effect: 'fade',
-	autoplay: {
-		delay: 3000,
-		disableOnInteraction: false,
-	},
-	*/
+
 	observer: true,
 	observeParents: true,
-	slidesPerView: 3,
+	slidesPerView: 1,
 	spaceBetween: 30,
 	autoHeight: true,
 	speed: 1200,
 	initialSlide: 2,
-	//touchRatio: 0,
-	//simulateTouch: false,
-	//loop: true,
-	//preloadImages: false,
-	//lazy: true,
 
 	// Dotts
 	pagination: {
@@ -130,9 +119,28 @@ let popular_slider = new Swiper('.popular__slider', {
 		lazyImageReady: function () {
 			ibg();
 		},
-	}
-	// And if we need scrollbar
-	//scrollbar: {
-	//	el: '.swiper-scrollbar',
-	//},
+	},
+
+	breakpoints: {
+		1170: {
+			slidesPerView: 3,
+			// spaceBetween: 30,
+		},
+		991.98: {
+			slidesPerView: 2.8,
+			// spaceBetween: 20,
+		},
+		767.98: {
+			// slidesPerView: 4,
+			slidesPerView: 2.2,
+			// spaceBetween: 30,
+		},
+		479.98: {
+			slidesPerView: 1.2,
+			// slidesPerView: 4,
+			// spaceBetween: 20,
+		},
+	},
+	
 });
+	
