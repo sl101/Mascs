@@ -149,12 +149,18 @@
 	&__link {
 		color: $black-200;
 		text-decoration: transparent;
+		// border: 1px solid transparent;
 		transition: all $hoverTime ease;
 
 		@include md-min {
 			&:hover {
 				color: $teal-400;
 				text-decoration: underline;
+			}
+
+			&:focus,
+			&:active {
+				text-decoration: none;
 			}
 		}
 	}
@@ -186,6 +192,10 @@
 				opacity: 1;
 				visibility: visible;
 				pointer-events: all;
+			}
+
+			&:active {
+				text-decoration: none;
 			}
 		}
 
