@@ -1,8 +1,9 @@
 .request {
 	max-width: 825px;
+	width: 100%;
 	background-color: $white-400;
 	border-radius: 10px;
-	padding: 63px 60px 60px;
+	padding: 65px 60px 60px;
 	box-shadow: 0 0 10px 10px $white-400;
 
 	// .request__title
@@ -18,7 +19,7 @@
 		display: flex;
 		justify-content: space-between;
 		line-height: 1.2;
-		margin: 0 0 22px;
+		margin: 0 0 10px;
 	}
 
 	// .request__announcement

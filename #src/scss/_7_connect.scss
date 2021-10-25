@@ -1,0 +1,53 @@
+.connect {
+	padding: 63px 0 60px;
+	// .connect__title
+
+	&__title {
+	}
+
+	// .connect__content
+
+	&__content {
+		position: relative;
+		display: flex;
+		// align-items: center;
+		justify-content: start;
+		min-height: 100%;
+	}
+
+	// .connect__rectangle
+
+	&__rectangle {
+		// position: absolute;
+		top: 0;
+		left: 0;
+		max-width: 730px;
+		width: 100%;
+		min-height: 441px;
+		border: 2px solid $teal-200;
+		border-radius: 10px;
+	}
+
+	.request {
+		position: absolute;
+		z-index: 5;
+		top: 50%;
+		right: 0;
+		transform: translate(0, -50%);
+		box-shadow: 0 0 0 0 transparent;
+	}
+}
+
+.covid-16 {
+	top: 40px;
+	left: -100px;
+	z-index: 0;
+
+	@include lg {
+		opacity: 0.1;
+	}
+	// .covid-16__picture
+	&__picture {
+		animation: rightRotate 60s linear infinite;
+	}
+}

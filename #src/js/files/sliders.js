@@ -97,8 +97,8 @@ let popular_slider = new Swiper('.popular__slider', {
 
 	observer: true,
 	observeParents: true,
-	slidesPerView: 1,
-	spaceBetween: 30,
+	slidesPerView: 1.1,
+	spaceBetween: 7,
 	autoHeight: true,
 	speed: 1200,
 	initialSlide: 2,
@@ -130,15 +130,25 @@ let popular_slider = new Swiper('.popular__slider', {
 			slidesPerView: 2.8,
 			// spaceBetween: 20,
 		},
-		767.98: {
+		787.98: {
 			// slidesPerView: 4,
-			slidesPerView: 2.2,
+			slidesPerView: 2.4,
 			// spaceBetween: 30,
 		},
-		479.98: {
-			slidesPerView: 1.2,
+		619.88: {
 			// slidesPerView: 4,
-			// spaceBetween: 20,
+			slidesPerView: 1.8,
+			// spaceBetween: 30,
+		},
+		569.98: {
+			slidesPerView: 1.5,
+			// slidesPerView: 4,
+			spaceBetween: 10,
+		},
+		479.98: {
+			slidesPerView: 1.3,
+			// slidesPerView: 4,
+			spaceBetween: 7,
 		},
 	},
 	

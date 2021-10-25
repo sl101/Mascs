@@ -16,6 +16,10 @@
 	&__slider {
 		position: relative;
 		z-index: 1;
+
+		@include md {
+			// width: 100%;
+		}
 	}
 
 	// .popular__slider-slide
@@ -99,10 +103,26 @@
 
 	& .product {
 		max-width: 350px;
+
+		&__content {
+			@include sm {
+				padding: 32px 25px 25px;
+			}
+		}
+
+		&__title {
+			@include sm {
+				font-size: 22px;
+			}
+		}
+
+		&__inner {
+			display: none;
+		}
 	}
 
-	& .product__inner {
-		display: none;
+	._container {
+		// padding: 0;
 	}
 }
 
