@@ -1,10 +1,29 @@
 .request {
+	display: block;
 	max-width: 825px;
 	width: 100%;
 	background-color: $white-400;
 	border-radius: 10px;
-	padding: 65px 60px 60px;
+	padding: 63px 60px 60px;
 	box-shadow: 0 0 10px 10px $white-400;
+
+	@include xl {
+	}
+
+	@include lg {
+		width: auto;
+		text-align: center;
+	}
+
+	@include md {
+		max-width: 430px;
+		padding: 45px 30px 40px;
+	}
+
+	@include sm {
+		max-width: 250px;
+		padding: 15px 10px 10px;
+	}
 
 	// .request__title
 	&__title {
@@ -20,11 +39,20 @@
 		justify-content: space-between;
 		line-height: 1.2;
 		margin: 0 0 10px;
+
+		@include lg {
+			flex-direction: column;
+		}
 	}
 
 	// .request__announcement
 	&__announcement {
 		max-width: 200px;
+
+		@include lg {
+			max-width: 100%;
+			margin-bottom: 15px;
+		}
 	}
 
 	// .request__block
@@ -32,6 +60,16 @@
 		display: flex;
 		justify-content: space-between;
 		margin: 10px 50px 0 0;
+
+		@include lg {
+			align-items: center;
+			justify-content: center;
+		}
+
+		@include md {
+			margin: 0;
+			flex-direction: column;
+		}
 	}
 
 	// .request__note
@@ -39,6 +77,10 @@
 		max-width: 156px;
 		font-size: 12px;
 		margin: 0 20px 0;
+
+		@include md {
+			margin: 0 0 15px;
+		}
 	}
 
 	// .request__form
@@ -46,6 +88,12 @@
 		display: flex;
 		justify-content: space-between;
 		margin: 0 0 7px;
+
+		@include lg {
+			flex-direction: column;
+			align-items: center;
+			margin: 0 0 20px;
+		}
 	}
 
 	// .request__input
@@ -56,9 +104,19 @@
 		border: 1px solid $teal-450;
 		border-radius: 20px;
 		margin: 0 30px 0 0;
+
 		&::placeholder {
 			font-size: 12px;
 		}
+
+		@include lg {
+			margin: 0 0 20px;
+		}
+	}
+
+	// .request__description
+	&__description {
+		margin: 0 0 22px;
 	}
 
 	// .request__attention

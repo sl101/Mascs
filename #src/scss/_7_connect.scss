@@ -1,24 +1,22 @@
 .connect {
 	padding: 63px 0 60px;
-	// .connect__title
-
-	&__title {
-	}
 
 	// .connect__content
-
 	&__content {
 		position: relative;
 		display: flex;
-		// align-items: center;
-		justify-content: start;
-		min-height: 100%;
+		align-items: center;
+		justify-content: flex-end;
+		min-height: 441px;
+
+		@include lg {
+			justify-content: center;
+		}
 	}
 
 	// .connect__rectangle
-
 	&__rectangle {
-		// position: absolute;
+		position: absolute;
 		top: 0;
 		left: 0;
 		max-width: 730px;
@@ -26,14 +24,17 @@
 		min-height: 441px;
 		border: 2px solid $teal-200;
 		border-radius: 10px;
+
+		@include lg {
+			top: 50%;
+			transform: translate(0, -50%);
+		}
 	}
 
 	.request {
-		position: absolute;
+		height: 100%;
+		position: relative;
 		z-index: 5;
-		top: 50%;
-		right: 0;
-		transform: translate(0, -50%);
 		box-shadow: 0 0 0 0 transparent;
 	}
 }
@@ -41,13 +42,26 @@
 .covid-16 {
 	top: 40px;
 	left: -100px;
-	z-index: 0;
 
 	@include lg {
-		opacity: 0.1;
+		top: -170px;
 	}
+
+	@include sm {
+		z-index: 3;
+	}
+
+	@include md {
+		top: -140px;
+		left: -80px;
+	}
+
 	// .covid-16__picture
 	&__picture {
 		animation: rightRotate 60s linear infinite;
+
+		@include md {
+			max-width: 70%;
+		}
 	}
 }
