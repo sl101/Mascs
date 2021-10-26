@@ -1,6 +1,6 @@
 .footer {
 	background-color: $teal-300;
-	padding: 40px 0;
+	padding: 42px 0 30px;
 
 	@include md {
 		padding: 20px 0;
@@ -27,6 +27,7 @@
 		color: $white-400;
 
 		&--logo {
+			margin-bottom: 7px;
 			@include md {
 				order: 2;
 			}
@@ -58,6 +59,13 @@
 		}
 	}
 
+	// .footer__logo
+	&__logo {
+		display: block;
+		max-width: 64px;
+		// margin: 0 0 5px;
+	}
+
 	// .footer__copy
 	&__copy {
 		display: block;
@@ -66,7 +74,7 @@
 	// .footer__note
 	&__note {
 		display: block;
-		margin-bottom: 10px;
+		margin: 0 0 15px;
 	}
 
 	// .footer__phones
@@ -74,7 +82,6 @@
 		display: flex;
 		font-weight: 400;
 		justify-content: space-between;
-		margin-bottom: 10px;
 		max-width: 320px;
 
 		@include lg {
@@ -109,6 +116,12 @@
 		color: $white;
 	}
 
+	// .footer__contact
+	&__contact {
+		display: block;
+		padding: 0 0 8px;
+	}
+
 	// .footer__email
 	&__email {
 		font-weight: 400;
@@ -120,5 +133,6 @@
 		display: block;
 		font-weight: 400;
 		color: $white-400;
+		padding: 8px 0 2px;
 	}
 }

@@ -1,12 +1,16 @@
 .networks {
-	// .networks__list
-	&__list {
-	}
+	// .networks__contact
+	&__contact {
+		transition: all $hoverTime ease;
 
-	// .networks__link
-	&__link {
-		@include sm {
-			// margin-bottom: 10px;
+		&:hover {
+			transform: translate(0, -3px);
+		}
+
+		&:hover ._icon-telegram:before,
+		&:hover ._icon-viber:before,
+		&:hover ._icon-whatsapp:before {
+			color: $teal-200;
 		}
 	}
 }

@@ -6,10 +6,13 @@
 
 	// .product__image
 	&__image {
+		max-width: 350px;
 	}
 
 	// .product__img
 	&__img {
+		width: 100%;
+		min-height: 261px;
 		border-radius: 10px;
 	}
 

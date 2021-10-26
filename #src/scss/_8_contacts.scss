@@ -9,7 +9,7 @@
 		display: flex;
 		justify-content: start;
 		align-items: center;
-		padding: 120px 0;
+		padding: 125px 0 120px;
 
 		@include lg {
 			flex-direction: column;
@@ -50,7 +50,7 @@
 		width: 100%;
 		background-color: $white-400;
 		box-shadow: 0 0 50px 60px $white-400;
-		padding: 20px 10px;
+		padding: 35px 10px 20px;
 
 		@include xl {
 			max-width: 255px;
@@ -158,13 +158,13 @@
 	}
 
 	.covid-11 {
-		top: -190px;
-		left: 150px;
+		top: -150px;
+		left: -150px;
 		z-index: 2;
 
 		@include md {
-			top: -150px;
-			left: -90px;
+			top: -90px;
+			left: -100px;
 		}
 
 		// .covid-11__picture
